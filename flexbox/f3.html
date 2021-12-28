@@ -1,0 +1,53 @@
+<html>
+<head>
+	<!--link href="layout.css" rel="stylesheet" type="text/css" / -->
+	<!-- script src="./3p/angular.js"></script -->
+
+	<style type="text/css">
+		.navigation {
+            display : flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-end;  /* align items to the end line on main-axis*/
+
+            background: deepskyblue;
+        }
+		.menu-item {
+            margin: 3px;
+            padding: 1em;
+            color: white;
+         }
+        .menu-item:hover {
+            background: #1565C0;
+        }
+
+        @media all and (max-width: 800px) {
+            .navigation {
+                justify-content: space-around;
+            }
+        }
+
+        @media all and (max-width: 600px) {
+            .navigation {
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            .menu-item {
+                text-align: center;
+                border-top: 1px solid rgba(255, 255, 255,0.3);
+            }
+        }
+	</style>
+	<script type="text/javascript">
+	</script>
+</head>
+<body>
+	<div class="navigation">
+        <div class="menu-item">Home</div>
+        <div class="menu-item">About</div>
+        <div class="menu-item">Products</div>
+        <div class="menu-item">Contact</div>
+    </div>
+	
+</body>
+</html>
