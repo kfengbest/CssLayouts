@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* body {
+            margin: 0;
+        } */
+        .icon-bar {
+            background-color: dimgray;
+            text-align: center;
+            width: fit-content;
+            margin: 1em auto;
+        }
+
+        .bar-item {
+            transition: all 0.3s ease;
+            font-size: 36px;
+            display: inline-block;
+        }
+
+        .parent1 {
+            background-color: deepskyblue;
+            text-align: center;
+        }
+        .child-row1 {
+            background-color: tomato; 
+            display:inline-block
+        }
+
+        .parent2 {
+            background-color: deepskyblue;
+            margin: 1px auto;
+        }
+        .child-row2 {
+            background-color: tomato; 
+            float: left;
+        }
+
+        .parent3 {
+            background-color: deepskyblue;
+            display: flex;
+            flex-direction: row;
+        }
+        .child-row3 {
+            background-color: tomato; 
+        }
+
+        .parent31 {
+            background-color: deepskyblue;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .child-row31 {
+            background-color: tomato; 
+        }
+
+        .parent32 {
+            background-color: deepskyblue;
+            display: flex;
+            flex-direction: row;
+            width: fit-content;
+            margin: 2px auto;
+        }
+        .child-row32 {
+            background-color: tomato; 
+            margin: 2px 2px;
+        }
+    </style>
+
+    <body>
+        <div class="icon-bar">
+            <a href="#" class="bar-item active"><i class="fa fa-home"></i></a>
+            <a href="#" class="bar-item"><i class="fa fa-search"></i></a>
+            <a href="#" class="bar-item"><i class="fa fa-envelope"></i></a>
+            <a href="#" class="bar-item"><i class="fa fa-globe"></i></a>
+        </div>
+        <div class="parent1">
+            <div class="child-row1">Home</div>
+            <div class="child-row1">News</div>
+            <div class="child-row1">About</div>
+            <div class="child-row1">Contact</div>
+        </div>
+        <ul class="parent1">
+            <li class="child-row1">Home</li>
+            <li class="child-row1">News</li>
+            <li class="child-row1">About</li>
+            <li class="child-row1">Contact</li>
+        </ul>
+        <div class="parent2">
+            <div class="child-row2">Home</div>
+            <div class="child-row2">News</div>
+            <div class="child-row2">About</div>
+            <div class="child-row2">Contact</div>
+        </div>
+        <br>
+        <br>
+        <div class="parent3">
+            <div class="child-row3">Home</div>
+            <div class="child-row3">News</div>
+            <div class="child-row3">About</div>
+            <div class="child-row3">Contact</div>
+        </div>
+        <br>
+        <div class="parent31">
+            <div class="child-row31">Home</div>
+            <div class="child-row31">News</div>
+            <div class="child-row31">About</div>
+            <div class="child-row31">Contact</div>
+        </div>
+        <br>
+        <div class="parent32">
+            <div class="child-row32">Home</div>
+            <div class="child-row32">News</div>
+            <div class="child-row32">About</div>
+            <div class="child-row32">Contact</div>
+        </div>
+    </body>
+</html>
