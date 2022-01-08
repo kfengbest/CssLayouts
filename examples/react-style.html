@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add React in One Minute</title>
+    <style>
+        .app {background-color: gray;}
+    </style>
+    <!-- <link rel="stylesheet" href="react-style.css"> -->
+  </head>
+  <body>
+
+    <!-- We will put our React component inside this div. -->
+    <div id="app"></div>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+    <!-- Load our React component. -->
+    <!-- <script src="like_button.js"></script> -->
+    <script type="text/babel">
+
+        // inline css
+        const headerCss = {
+            color : 'red'
+        }
+
+        const todoData = [
+            {   
+                task: "setup app",
+                complete: false
+            },
+            {
+                task: "render ui structure",
+                complete: false
+            },
+            {
+                task: "handle event",
+                complete: false
+            }
+        ];
+
+        class AddTaskForm extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    task : ""
+                }
+            }
+
+            handleInputChange = (e) => {
+                let t = e.currentTarget.value;
+                this.setState({
+                    task : t
+                });
+            }
+
+            handleOnSubmit = (e) => {
+                e.preventDefault();
+                this.props.addTask(this.state.task);
+                this.setState({
+                    task : ""
+                })
+            }
+
+            render() {
+                return (
+                    <div>
+                        <input type="text" value={this.state.task} placeholder="Enter task..." onChange={this.handleInputChange} />
+                        <button onClick={this.handleOnSubmit}>Add Task</button>
+                    </div>
+                );
+            }
+        }
+
+        function TodoItem(props) {
+            return (
+              <div>{props.todo.task}</div>  
+            );
+        }
+
+        function TodoList(props) {
+            let todoItems = props.todos.map( todo => {
+                return (
+                    <TodoItem todo={todo}/>
+                );
+            })
+            return (
+                <div>
+                    {todoItems}
+                </div>
+            );
+        }
+
+        function App(props) {
+            const [todoList, setTodoList] = React.useState(todoData);
+
+            const addTask = (task) => {
+                if(!task || task === '')
+                    return;
+                
+                const newTask = {
+                    task: task,
+                    complete : false
+                }
+                let copy = [...todoList, newTask];
+
+                setTodoList(copy)
+            }
+
+            return (
+                <div className="app">
+                    <h1 style={headerCss}>Hello, React!</h1>
+                    <div className="todo-item-test">style from css file</div>
+                    <AddTaskForm addTask={addTask} />
+                    <TodoList todos={todoList} />
+                </div>
+            )
+        }
+
+        ReactDOM.render(
+            <App />,
+            document.getElementById("app")
+        )
+    </script>
+  </body>
+</html>
