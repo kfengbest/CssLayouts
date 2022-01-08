@@ -19,11 +19,16 @@
             display: flex;
         }
 
+        .container-center {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
         .item-fix-box {
             width: 100px;
             height: 100px;
             margin: 3px 3px;
-
         }
 
         .item-stretch {
@@ -96,6 +101,11 @@
             <div class="item-auto bg-skblue">
                 <div class="item-fix-box bg-tomato">Fix</div>
             </div>
-        </div> 
+        </div>
+        <div class="container-center bg-skblue">
+            <div class="item-fix-box bg-tomato">fix</div>
+            <div class="item-fix-box bg-tomato">fix</div>
+            <div class="item-fix-box bg-tomato">fix</div>
+        </div>
     </body>
 </html>
