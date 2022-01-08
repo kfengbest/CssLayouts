@@ -15,6 +15,10 @@
             background-color: tomato;
         }
 
+        .bg-wheat {
+            background-color: wheat;
+        }
+
         .container {
             display: flex;
         }
@@ -27,6 +31,34 @@
         .column {
             display: flex;
             flex-direction: column;
+        }
+        .width20 {
+            width: 20px;
+        }
+        .width50 {
+            width: 50px;
+        }
+        .width100 {
+            width: 100px;
+        }
+        .width200 {
+            width: 200px;
+        }
+        .height20 {
+            height: 20px;;
+        }
+        .height50 {
+            height: 50px;;
+        }
+        .height100 {
+            height: 100px;;
+        }
+        .height200 {
+            height: 200px;;
+        }
+
+        .margin2 {
+            margin : 2px 2px;
         }
 
         .container-center {
@@ -141,6 +173,26 @@
             <div class="item-3x3 bg-tomato"></div>
             <div class="item-3x3 bg-tomato"></div>
         </div>
-        
+        <hr>
+        <div class="column">
+            <div class="row bg-skblue">
+                <div class="item-fix-box bg-tomato"></div>
+                <div class="item-stretch bg-wheat">
+                    <div class="column">
+                        <div class="row margin2 width200 height20 bg-tomato"></div>
+                        <div class="row margin2 width200 height20 bg-tomato"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row bg-skblue">
+                <div class="item-fix-box bg-tomato"></div>
+                <div class="item-stretch bg-wheat">
+                    <div class="column">
+                        <div class="row margin2 width200 height20 bg-tomato"></div>
+                        <div class="row margin2 width200 height20 bg-tomato"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
