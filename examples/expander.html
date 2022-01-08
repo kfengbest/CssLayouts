@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .expand-header {
+            background-color: #eee;
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            padding: 18px;
+        }
+
+        .expand-header:after {
+            content : '\02795';
+            float: right;
+            color: #777;
+            font-size: 13px;
+        }
+
+        .expand-header:hover {
+            background-color: #ccc;
+        }
+
+        .expand-panel {
+            background-color: #eee;
+            display: none;
+            padding: 1px 18px;
+        }
+        .expand-header.active:after {
+            content: "\2796";
+        }
+        
+    </style>
+	<script type="text/javascript">
+        function onHeaderClicked() {
+            let headers = document.getElementsByClassName("expand-header");
+            headers[0].classList.toggle('active');
+
+            let panel = document.getElementsByClassName("expand-panel")[0];
+            if(panel.style.display === 'block') {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        }
+	</script>
+    <body>
+        <button class="expand-header" onclick="onHeaderClicked(event)">Section 1</button>
+        <div class="expand-panel">
+            <p>contents goes here</p>
+        </div>
+    </body>
+</html>
