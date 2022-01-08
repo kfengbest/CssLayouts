@@ -15,6 +15,10 @@
             background-color: tomato;
         }
 
+        .container {
+            display: flex;
+        }
+
         .item-fix-box {
             width: 100px;
             height: 100px;
@@ -22,16 +26,12 @@
 
         }
 
-        .container {
-            display: flex;
-        }
-
         .item-stretch {
             flex-grow: 1;
             margin: 2px 2px;
         }
 
-        .row-auto {
+        .item-auto {
             display: flex;
             flex-direction: row;
         }
@@ -78,7 +78,7 @@
         </div>
         <hr>
         <div class="container">
-            <div class="row-auto bg-skblue">
+            <div class="item-auto bg-skblue">
                 <div class="item-fix-box bg-tomato">Fix</div>
                 <div class="item-fix-box bg-tomato">Fix</div>
                 <div class="item-fix-box bg-tomato">Fix</div>
@@ -87,13 +87,13 @@
         </div> 
         <hr>
         <div class="container">
-            <div class="row-auto bg-skblue">
+            <div class="item-auto bg-skblue">
                 <div class="item-fix-box bg-tomato">Fix</div>
                 <div class="item-fix-box bg-tomato">Fix</div>
                 <div class="item-fix-box bg-tomato">Fix</div>
             </div>
             <div class="item-stretch bg-skblue">Stretch</div>
-            <div class="row-auto bg-skblue">
+            <div class="item-auto bg-skblue">
                 <div class="item-fix-box bg-tomato">Fix</div>
             </div>
         </div> 
