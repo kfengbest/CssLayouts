@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .cs-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cs-container-row {
+            display: flex;
+            flex-direction: row;
+        }
+        .cs-row {
+            background-color: silver;
+            margin: 2px 2px;
+            padding: 5px 5px;
+        }
+        .cs-left { 
+            margin: 2px 2px;
+            flex-grow: 1;
+            background-color: tan;
+            width: 30%;
+        }
+        .cs-right {
+            margin: 2px 2px;
+            flex-grow: 1;
+            background-color: tan;
+            width: 70%;
+        }
+
+        .height100 {
+            height : 100px;
+        }
+
+        .cs-indent-1 {
+            padding-left: 18px;
+        }
+
+        .cs-cb-item {
+            margin: 2px 0px;
+        }
+    </style>
+
+    <body>
+        <div class="cs-container">
+            <div class="cs-row">
+                <input type="checkbox" id="cb1">
+                <label for="cb1">All Settings</label>
+            </div>
+            <div class="cs-container-row">
+                <div class="cs-left">
+                    <div class="cs-row">
+                        <input type="checkbox" id="cb2">
+                        <label for="cb1">Information(all)</label>
+                    </div>
+                    <div class="cs-row">
+                        <input type="checkbox" id="cb3">
+                        <label for="cb1">Logo</label>
+                    </div>
+                    <div class="cs-row">
+                        <div class="cs-cb-item"><input type="checkbox" id="cb3"><label for="cb1">Product(all)</label></div>
+                        <div class="cs-indent-1">
+                            <div class="cs-cb-item"><input type="checkbox" id="cb3"> <label for="cb1">Dispaly Name</label></div>
+                            <div class="cs-cb-item"><input type="checkbox" id="cb3"> <label for="cb1">Dispaly Name</label></div>
+                            <div class="cs-cb-item"><input type="checkbox" id="cb3"> <label for="cb1">Dispaly Name</label></div>
+                            <div class="cs-cb-item"><input type="checkbox" id="cb3"> <label for="cb1">Dispaly Name</label></div>
+                            <div class="cs-cb-item"><input type="checkbox" id="cb3"> <label for="cb1">Dispaly Name</label></div>
+                            <div class="cs-cb-item"><input type="checkbox" id="cb3"> <label for="cb1">Dispaly Name</label></div>
+                        </div>
+                    </div>
+                    <div class="cs-row">
+                        <div class="cs-cb-item"><input type="checkbox" id="cb3"><label for="cb1">Filters(all)</label></div>
+                        <div class="cs-indent-1">
+                            <div class="cs-cb-item"><input type="checkbox" id="cb3"> <label for="cb1">Filters</label></div>
+                            <div class="cs-cb-item"><input type="checkbox" id="cb3"> <label for="cb1">Filters</label></div>
+                            <div class="cs-cb-item"><input type="checkbox" id="cb3"> <label for="cb1">Sorting</label></div>
+                            <div class="cs-cb-item"><input type="checkbox" id="cb3"> <label for="cb1">Filters</label></div>
+                            <div class="cs-cb-item"><input type="checkbox" id="cb3"> <label for="cb1">Filters</label></div>
+                            <div class="cs-cb-item"><input type="checkbox" id="cb3"> <label for="cb1">Filters</label></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cs-right">
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
