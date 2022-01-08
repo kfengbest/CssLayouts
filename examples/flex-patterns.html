@@ -11,55 +11,91 @@
             background-color: deepskyblue;
         }
 
-        .e1-container {
+        .bg-tomato {
+            background-color: tomato;
+        }
+
+        .item-fix-box {
+            width: 100px;
+            height: 100px;
+            margin: 3px 3px;
+
+        }
+
+        .container {
             display: flex;
         }
+
+        .item-stretch {
+            flex-grow: 1;
+            margin: 2px 2px;
+        }
+
+        .row-auto {
+            display: flex;
+            flex-direction: row;
+        }
+
+/*------------------------------------------*/
 
         .e1-item-stretch {
             flex-grow: 1;
             height: 100px;
-        }
-
-        .e1-item-stretch + .e1-item-stretch {
-            margin-left: 2%;
-        }
-
-        /*------------------------------------------*/
-
-        .e2-container {
-            display: flex;
-        }
-
-        .e2-item-fix {
-            width: 100px;
-            height: 100px;
             margin: 2px 2px;
         }
 
-        .e2-item-stretch {
-            flex-grow: 1;
-            margin: 2px 2px;
-        }
+
+/*------------------------------------------*/
+
         
-        /*------------------------------------------*/
+/*------------------------------------------*/
+
+/*------------------------------------------*/
+
+/*------------------------------------------*/
+
+/*------------------------------------------*/
+
+/*------------------------------------------*/
 
     </style>
 
     <body>
-        <div class="e1-container">
+        <div class="container">
             <div class="e1-item-stretch bg-skblue">Stretch</div>
             <div class="e1-item-stretch bg-skblue">Stretch</div>
             <div class="e1-item-stretch bg-skblue">Stretch</div>
         </div>
         <hr>
-        <div class="e2-container">
-            <div class="e2-item-fix bg-skblue">Fix</div>
-            <div class="e2-item-stretch bg-skblue">Stretch</div>
+        <div class="container">
+            <div class="item-fix-box bg-skblue">Fix</div>
+            <div class="item-stretch bg-skblue">Stretch</div>
         </div>
         <hr>
-        <div class="e2-container">
-            <div class="e2-item-stretch bg-skblue">Stretch</div>
-            <div class="e2-item-fix bg-skblue">Fix</div>
-        </div>     
+        <div class="container">
+            <div class="item-stretch bg-skblue">Stretch</div>
+            <div class="item-fix-box bg-skblue">Fix</div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row-auto bg-skblue">
+                <div class="item-fix-box bg-tomato">Fix</div>
+                <div class="item-fix-box bg-tomato">Fix</div>
+                <div class="item-fix-box bg-tomato">Fix</div>
+            </div>
+            <div class="item-stretch bg-skblue">Stretch</div>
+        </div> 
+        <hr>
+        <div class="container">
+            <div class="row-auto bg-skblue">
+                <div class="item-fix-box bg-tomato">Fix</div>
+                <div class="item-fix-box bg-tomato">Fix</div>
+                <div class="item-fix-box bg-tomato">Fix</div>
+            </div>
+            <div class="item-stretch bg-skblue">Stretch</div>
+            <div class="row-auto bg-skblue">
+                <div class="item-fix-box bg-tomato">Fix</div>
+            </div>
+        </div> 
     </body>
 </html>
