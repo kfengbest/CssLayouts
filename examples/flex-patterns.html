@@ -51,7 +51,18 @@
 
 
 /*------------------------------------------*/
+        .container-3x3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
 
+        .item-3x3 {
+            flex-grow: 0;
+            flex-basis: 32%;
+            margin-bottom: 2%;
+            height: 100px;
+        }
         
 /*------------------------------------------*/
 
@@ -102,10 +113,23 @@
                 <div class="item-fix-box bg-tomato">Fix</div>
             </div>
         </div>
+        <hr>
         <div class="container-center bg-skblue">
             <div class="item-fix-box bg-tomato">fix</div>
             <div class="item-fix-box bg-tomato">fix</div>
             <div class="item-fix-box bg-tomato">fix</div>
+        </div>
+        <hr>
+        <div class="container-3x3 bg-skblue">
+            <div class="item-3x3 bg-tomato"></div>
+            <div class="item-3x3 bg-tomato"></div>
+            <div class="item-3x3 bg-tomato"></div>
+            <div class="item-3x3 bg-tomato"></div>
+            <div class="item-3x3 bg-tomato"></div>
+            <div class="item-3x3 bg-tomato"></div>
+            <div class="item-3x3 bg-tomato"></div>
+            <div class="item-3x3 bg-tomato"></div>
+            <div class="item-3x3 bg-tomato"></div>
         </div>
     </body>
 </html>
