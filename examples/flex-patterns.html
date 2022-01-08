@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!-- https://tobiasahlin.com/blog/common-flexbox-patterns/ -->
+
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        .bg-skblue {
+            background-color: deepskyblue;
+        }
+
+        .e1-container {
+            display: flex;
+        }
+
+        .e1-item-stretch {
+            flex-grow: 1;
+            height: 100px;
+        }
+
+        .e1-item-stretch + .e1-item-stretch {
+            margin-left: 2%;
+        }
+
+        /*------------------------------------------*/
+
+        .e2-container {
+            display: flex;
+        }
+
+        .e2-item-fix {
+            width: 100px;
+            height: 100px;
+            margin: 2px 2px;
+        }
+
+        .e2-item-stretch {
+            flex-grow: 1;
+            margin: 2px 2px;
+        }
+        
+        /*------------------------------------------*/
+
+    </style>
+
+    <body>
+        <div class="e1-container">
+            <div class="e1-item-stretch bg-skblue">Stretch</div>
+            <div class="e1-item-stretch bg-skblue">Stretch</div>
+            <div class="e1-item-stretch bg-skblue">Stretch</div>
+        </div>
+        <hr>
+        <div class="e2-container">
+            <div class="e2-item-fix bg-skblue">Fix</div>
+            <div class="e2-item-stretch bg-skblue">Stretch</div>
+        </div>
+        <hr>
+        <div class="e2-container">
+            <div class="e2-item-stretch bg-skblue">Stretch</div>
+            <div class="e2-item-fix bg-skblue">Fix</div>
+        </div>     
+    </body>
+</html>
