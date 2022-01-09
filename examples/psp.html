@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .row {
+            display : flex;
+            flex-direction: row;
+            margin: 2px 2px;
+        }
+
+        .col {
+            display : flex;
+            flex-direction: column;
+            margin: 2px 2px;
+        }
+
+        .split-v {
+            display : flex;
+            flex-direction: column;
+            margin: 2px 2px;
+        }
+
+        .split-h {
+            display : flex;
+            flex-direction: row;
+            margin: 2px 2px;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            background-color: mediumorchid;
+            height: 100%;
+        }
+        .list-item {
+            background-color: rgb(50, 139, 132);
+            width: 100%;
+            height: 20px;
+            margin: 2px 2px;
+        }
+
+        .tabs {
+            display : flex;
+            flex-direction: column;
+            background-color: green;
+        }
+        
+        .tab-headers {
+            display: flex;
+            flex-direction: row;
+            height: 10%;
+            width: 100%;
+        }
+
+        .tab-header {
+            background-color: hotpink;
+            height: 100%;
+            margin: 2px 2px;
+            flex-grow: 1;
+        }
+
+        .tab-header:hover {
+            background-color: rgb(230, 16, 123);
+        }
+
+        .tab-content {
+            background-color: indianred;
+            width: 100%;
+            height: 90%;
+        }
+
+        .nav-v {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .nav-v-tabs {
+            display : flex;
+            flex-direction: column;
+        }
+
+        .nav-v-tab {
+            height: 40px;
+            width: 100%;
+            background-color: lightslategray;
+            border: 1px solid;
+        }
+
+        .nav-v-tab:hover {
+            background-color: rgb(70, 110, 150);
+        }
+
+        .nav-v-panel {
+            flex-grow: 1;
+            background-color: mediumaquamarine;
+            width: 100%;
+            height: 600px;
+        }
+
+        .grid {
+            display : flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .grid-item {
+            width: 120px;
+            height: 150px;
+            background-color: khaki;
+            margin: 2px 2px;
+        }
+
+        .stretch {
+            flex-grow: 1;
+        }
+
+        .width30p {
+            flex-basis: 30%;
+        }
+
+        .width40p {
+            flex-basis: 40%;
+        }
+
+        .width100p {
+            width: 100%;
+        }
+
+        .width50p {
+            flex-basis: 50%;
+        }
+
+        .height100p {
+            height : 100%;
+        }
+
+        .height800 {
+            height : 800px;
+        }
+        .height50p {
+            height : 50%;
+        }
+
+        .bg-blue {
+            background-color: skyblue;
+        }
+
+        .bg-tomato {
+            background-color: tomato;
+        }
+
+        .bg-gold {
+            background-color: gold;
+        }
+
+    </style>
+	<script type="text/javascript">
+        
+	</script>
+    <body>
+        <div class="app split-h height800">
+            <div class="nav-v width30p">
+                <div class="nav-v-panel">EGS</div>
+                <div class="nav-v-tabs">
+                    <div class="nav-v-tab">AA</div>
+                    <div class="nav-v-tab">AA</div>
+                    <div class="nav-v-tab">AA</div>
+                    <div class="nav-v-tab">AA</div>
+                    <div class="nav-v-tab">AA</div>
+                </div>
+            </div>
+
+            <div class="split-h bg-blue right stretch">
+                <div class="list width40p">
+                    <div class="list-item"></div>
+                    <div class="list-item"></div>
+                    <div class="list-item"></div>
+                    <div class="list-item"></div>
+                    <div class="list-item"></div>
+                </div>
+                <div class="detail split-v height100p stretch bg-tomato">
+                    <div class="tabs width100p bg-blue height100p">
+                        <div class="tab-headers">
+                            <div class="tab-header">AA</div>
+                            <div class="tab-header">BB</div>
+                            <div class="tab-header">CC</div>
+                            <div class="tab-header">DD</div>
+                            <div class="tab-header">EE</div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="list bg-tomato">
+                                <div class="list-item bg-gold"></div>
+                                <div class="list-item bg-gold"></div>
+                                <div class="list-item bg-gold"></div>
+                                <div class="list-item bg-gold"></div>
+                                <div class="list-item bg-gold"></div>
+                                <div class="list-item bg-gold"></div>
+                                <div class="list-item bg-gold"></div>
+                                <div class="list-item bg-gold"></div>
+                                <div class="list-item bg-gold"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs width100p bg-blue height100p">
+                        <div class="tab-headers">
+                            <div class="tab-header">AA</div>
+                            <div class="tab-header">BB</div>
+                            <div class="tab-header">CC</div>
+                            <div class="tab-header">DD</div>
+                            <div class="tab-header">EE</div>
+                            <div class="tab-header">DD</div>
+                            <div class="tab-header">EE</div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="grid">
+                                <div class="grid-item"></div>
+                                <div class="grid-item"></div>
+                                <div class="grid-item"></div>
+                                <div class="grid-item"></div>
+                                <div class="grid-item"></div>
+                                <div class="grid-item"></div>
+                                <div class="grid-item"></div>
+                                <div class="grid-item"></div>
+                                <div class="grid-item"></div>
+                                <div class="grid-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
