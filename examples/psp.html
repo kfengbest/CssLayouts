@@ -39,6 +39,9 @@
             height: 20px;
             margin: 2px 2px;
         }
+        .list-item:hover {
+            border: 1px dashed;
+        }
 
         .tabs {
             display : flex;
@@ -103,13 +106,23 @@
             display : flex;
             flex-direction: row;
             flex-wrap: wrap;
+            background-color: mintcream;
+            height: 100%;
         }
 
         .grid-item {
             width: 120px;
             height: 150px;
             background-color: khaki;
-            margin: 2px 2px;
+            margin: 4px 4px;
+
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+            transition: 0.3s;
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .grid-item:hover {
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.4);
         }
 
         .stretch {
@@ -132,6 +145,9 @@
             flex-basis: 50%;
         }
 
+        .minWidth {
+            min-width: 200px;
+        }
         .height100p {
             height : 100%;
         }
@@ -161,7 +177,7 @@
 	</script>
     <body>
         <div class="app split-h height800">
-            <div class="nav-v width30p">
+            <div class="nav-v width30p minWidth">
                 <div class="nav-v-panel">EGS</div>
                 <div class="nav-v-tabs">
                     <div class="nav-v-tab">AA</div>
@@ -171,9 +187,8 @@
                     <div class="nav-v-tab">AA</div>
                 </div>
             </div>
-
             <div class="split-h bg-blue right stretch">
-                <div class="list width40p">
+                <div class="list width50p minWidth">
                     <div class="list-item"></div>
                     <div class="list-item"></div>
                     <div class="list-item"></div>
