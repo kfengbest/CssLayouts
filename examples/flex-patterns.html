@@ -23,6 +23,10 @@
             display: flex;
         }
 
+        .container-v {
+            display: flex;
+            flex-direction: column;
+        }
         .row {
             display: flex;
             flex-direction: row;
@@ -69,6 +73,11 @@
 
         .item-fix-box {
             width: 100px;
+            height: 100px;
+            margin: 3px 3px;
+        }
+
+        .item-fix-box-v {
             height: 100px;
             margin: 3px 3px;
         }
@@ -128,6 +137,7 @@
         <div class="container">
             <div class="item-fix-box bg-skblue">Fix</div>
             <div class="item-stretch bg-skblue">Stretch</div>
+            <div class="item-fix-box bg-skblue">Fix</div>
         </div>
         <hr>
         <div class="container">
@@ -193,6 +203,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container-v">
+            <div class="item-fix-box-v bg-skblue">Fix</div>
+            <div class="item-stretch bg-skblue">Stretch</div>
+            <div class="item-fix-box-v bg-skblue">Fix</div>
         </div>
     </body>
 </html>
